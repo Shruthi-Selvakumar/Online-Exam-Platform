@@ -1,0 +1,25 @@
+{
+  "name": "online-exam-platform",
+  "version": "1.0.0",
+  "description": "Online Quiz Examination System is a web-based application for student evaluation.\r This project fulfills the requirements of institutes to conduct exams online without relying on\r other platforms for better personalization. The student who has to write the exam and the\r corresponding faculty have to log in to the system with proper authentication from the\r administrator. The administrator has the privilege to create accounts for the users and can\r configure the subject. Various reports can be generated to view the results in a well-organized\r manner to all the users.\r # Users:\r # Student\r   1. Login- with authentication\r   2. Selecting courses\r   3. Taking quizzes\r   4. Can view a countdown timer for the remaining time of exam/quiz\r   5. Quizzes can be in the form of MCQs, one-word answers, or descriptive answers. Students\r   are required to fill in the text boxes or select correct options.\r   6. View the results after they get published\r   7. Review previous quiz marks and answers\r   8. Logout\r # Teaching faculty\r   1. Login- with authentication\r   2. Creating Online quizzes\r   3. Creating questions in the form of MCQs, one-word answers, or descriptive answers.\r   4. Setting a maximum time limit for each exam\r   5. Publishing results automatically after the quiz deadline\r   6. Editing questions before exam time.\r   7. Viewing the number of students attending the exam, the name of the student, time is\r   taken, and submission time.\r   8. Logout\r # Administrators\r   1. Login-with authentication\r   2. Assigning various courses to teaching faculty and students\r   3. The privilege of removing students or faculty from a course\r   4. Viewing all student marks\r   5. Sending an annual or half annual report to students\r   6. Logout",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shruthi-Selvakumar/Online-Exam-Platform.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shruthi-Selvakumar/Online-Exam-Platform/issues"
+  },
+  "homepage": "https://github.com/Shruthi-Selvakumar/Online-Exam-Platform#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "mysql": "^2.18.1"
+  }
+}
