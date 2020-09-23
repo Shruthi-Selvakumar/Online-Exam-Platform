@@ -36,4 +36,4 @@ manner to all the users.
   5. Sending an annual or half annual report to students
   6. Logout
   
-  This is meghana and idk how to use github XD
+  This is HARISH and idk how to use github XD
