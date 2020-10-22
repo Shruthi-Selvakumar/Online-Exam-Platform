@@ -76,6 +76,33 @@ INSERT INTO `answer` (`qid`, `ansid`) VALUES
 
 -- --------------------------------------------------------
 
+--
+-- Table structure for table `feedback`
+--
+
+CREATE TABLE `feedback` (
+  `id` text NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `subject` varchar(500) NOT NULL,
+  `feedback` varchar(500) NOT NULL,
+  `date` date NOT NULL,
+  `time` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `feedback`
+--
+
+INSERT INTO `feedback` (`id`, `name`, `email`, `subject`, `feedback`, `date`, `time`) VALUES
+('55846be776610', 'testing', 'sunnygkp10@gmail.com', 'testing', 'testing stART', '2015-06-19', '09:22:15pm'),
+('5584ddd0da0ab', 'netcamp', 'sunnygkp10@gmail.com', 'feedback', ';mLBLB', '2015-06-20', '05:28:16am'),
+('558510a8a1234', 'sunnygkp10', 'sunnygkp10@gmail.com', 'dl;dsnklfn', 'fmdsfld fdj', '2015-06-20', '09:05:12am'),
+('5585509097ae2', 'sunny', 'sunnygkp10@gmail.com', 'kcsncsk', 'l.mdsavn', '2015-06-20', '01:37:52pm'),
+('5586ee27af2c9', 'vikas', 'vikas@gmail.com', 'trial feedback', 'triaal feedbak', '2015-06-21', '07:02:31pm'),
+('5589858b6c43b', 'nik', 'nik1@gmail.com', 'good', 'good site', '2015-06-23', '06:12:59pm');
+
+-- --------------------------------------------------------
 
 --
 -- Table structure for table `history`
@@ -290,7 +317,10 @@ INSERT INTO `rank` (`email`, `score`, `time`) VALUES
 
 CREATE TABLE `user` (
   `name` varchar(50) NOT NULL,
+  `gender` varchar(5) NOT NULL,
+  `college` varchar(100) NOT NULL,
   `email` varchar(50) NOT NULL,
+  `mob` bigint(20) NOT NULL,
   `password` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -298,16 +328,16 @@ CREATE TABLE `user` (
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`name`, `email`, `password`) VALUES
-('Avantika', 'avantika420@gmail.com', 'e10adc3949ba59abbe56e057f20f883e'),
-('Mark Zukarburg',  'ceo@facebook.com',  'e10adc3949ba59abbe56e057f20f883e'),
-('Komal',  'komalpd2011@gmail.com','e10adc3949ba59abbe56e057f20f883e'),
-('Tom Cruze',  'mi5@hollywood.com', 'e10adc3949ba59abbe56e057f20f883e'),
-('Netcamp',  'netcamp@gmail.com', 'e10adc3949ba59abbe56e057f20f883e'),
-('Nikunj',  'nik1@gmail.com',  '202cb962ac59075b964b07152d234b70'),
-('Sunny',  'sunnygkp10@gmail.com',  'e10adc3949ba59abbe56e057f20f883e'),
-('User', 'user@user.com',  'e10adc3949ba59abbe56e057f20f883e'),
-('Vikash',  'vikash@gmail.com',  'e10adc3949ba59abbe56e057f20f883e');
+INSERT INTO `user` (`name`, `gender`, `college`, `email`, `mob`, `password`) VALUES
+('Avantika', 'F', 'KNIT sultanpur', 'avantika420@gmail.com', 7785068889, 'e10adc3949ba59abbe56e057f20f883e'),
+('Mark Zukarburg', 'M', 'Stanford', 'ceo@facebook.com', 987654321, 'e10adc3949ba59abbe56e057f20f883e'),
+('Komal', 'F', 'KNIT sultanpur', 'komalpd2011@gmail.com', 7785068889, 'e10adc3949ba59abbe56e057f20f883e'),
+('Tom Cruze', 'M', 'Hollywood', 'mi5@hollywood.com', 7785068889, 'e10adc3949ba59abbe56e057f20f883e'),
+('Netcamp', 'M', 'KNIT sultanpur', 'netcamp@gmail.com', 987654321, 'e10adc3949ba59abbe56e057f20f883e'),
+('Nikunj', 'M', 'XYZ', 'nik1@gmail.com', 987, '202cb962ac59075b964b07152d234b70'),
+('Sunny', 'M', 'KNIT sultanpur', 'sunnygkp10@gmail.com', 7785068889, 'e10adc3949ba59abbe56e057f20f883e'),
+('User', 'M', 'cimt', 'user@user.com', 11, 'e10adc3949ba59abbe56e057f20f883e'),
+('Vikash', 'M', 'KNIT sultanpur@gmail.com', 'vikash@gmail.com', 7785068889, 'e10adc3949ba59abbe56e057f20f883e');
 
 --
 -- Indexes for dumped tables
