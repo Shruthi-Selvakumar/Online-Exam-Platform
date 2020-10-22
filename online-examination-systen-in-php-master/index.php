@@ -102,9 +102,9 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Passwords mus
 
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-12 control-label" for="mob"></label>  
+  <label class="col-md-12 control-label title1" for="email"></label>
   <div class="col-md-12">
-  <input id="mob" name="mob" placeholder="Enter your mobile number" class="form-control input-md" type="number">
+    <input id="email" name="email" placeholder="Enter your email-id" class="form-control input-md" type="email">
     
   </div>
 </div>
