@@ -182,7 +182,7 @@ function validateForm()
 </div>
 
 <!--Modal for admin login-->
-	 <div class="modal fade" id="login">
+	<div class="modal fade" id="login">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
