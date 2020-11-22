@@ -130,6 +130,25 @@ function validateForm()
 </div>
 
 
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-12 control-label" for="gender"></label>
+  <div class="col-md-12">
+    <select id="gender" name="gender" placeholder="Enter your gender" class="form-control input-md" >
+   <option value="Male">Select Gender</option>
+  <option value="M">Male</option>
+  <option value="F">Female</option> </select>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-12 control-label" for="name"></label>  
+  <div class="col-md-12">
+  <input id="college" name="college" placeholder="Enter your college name" class="form-control input-md" type="text">
+    
+  </div>
+</div>
 
 <!-- Text input-->
 <div class="form-group">
@@ -140,6 +159,14 @@ function validateForm()
   </div>
 </div>
 
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-12 control-label" for="mob"></label>  
+  <div class="col-md-12">
+  <input id="mob" name="mob" placeholder="Enter your mobile number" class="form-control input-md" type="number">
+    
+  </div>
+</div>
 
 
 <!-- Text input-->
@@ -152,7 +179,7 @@ function validateForm()
 </div>
 
 <div class="form-group">
-  <label class="col-md-12control-label" for="cpassword"></label>
+  <label class="col-md-12 control-label" for="cpassword"></label>
   <div class="col-md-12">
     <input id="cpassword" name="cpassword" placeholder="Confirm Password" class="form-control input-md" type="password">
     
@@ -174,8 +201,6 @@ function validateForm()
 </div></div>
 </div><!--container end-->
 
-</div>
-</div>
 
 <!--Footer start-->
 <div class="row footer">

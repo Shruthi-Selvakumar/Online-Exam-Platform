@@ -34,7 +34,7 @@ min-height:535px;
 	}
 
 .panel{
-border-color:#c1ccff;
+border-color:#ffffff;
 margin:40px;
 padding:20px;
 font: 15px "Century Gothic", "Times Roman", sans-serif;
@@ -79,8 +79,6 @@ font-family:'typo';
     margin:20px;
     padding:10px;
     width:100px;
-    margin-top:15px;
-    margin-right:20px;
 }
 
 
@@ -90,7 +88,7 @@ font-family:'typo';
     color:#5D5C61;
     background-color:#83a5bd;
     font-size:20px;
-    padding:10px;
+    padding:2px;
     margin-top:15px;
     margin-right:20px;
 }
@@ -102,14 +100,16 @@ font-family:'typo';
 
 .footer
 {
-    margin-top: -0px;
+    margin-top: 15px;
+    text-align:center;
     border-top:1px solid;
     border-color:#000000;
     background-color:#c1ccff;
+    font: 15px "Century Gothic", "Times Roman", sans-serif;
 }
 
 .panel
 {
-    height: 500px;
+    height: 520px;
 }
 
