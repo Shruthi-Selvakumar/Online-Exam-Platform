@@ -230,6 +230,8 @@ function validateForm()
 <div class="form-group">
   <div class="col-md-12">
     <h2>About - <h2>
+    <p>This is an online test system that allows users to take online tests and automatically generates results based on answers marked by the admin. The system is designed for any number of subjects
+On choosing a subject the test starts and the user may now tick desired answers within the time limit. After the time ends the system goes to the result page and shows the user’s score to them.<p>
 
     </div>
   </div>
@@ -239,9 +241,6 @@ function validateForm()
 </div>
 </div>
 </div>
-
-
-
 
 <!--Modal for admin login-->
 <div class="col-md-2">
