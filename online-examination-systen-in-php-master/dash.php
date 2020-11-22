@@ -49,7 +49,9 @@ else
 $name = $_SESSION['name'];;
 
 include_once 'dbConnection.php';
-echo '<span class="pull-right top title1" ><span class="log1"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;&nbsp;Hello,</span> <a href="account.php" class="log log1">'.$name.'</a>&nbsp;|&nbsp;<a href="logout.php?q=account.php" class="log"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>&nbsp;Signout</button></a></span>';
+
+echo '<span class="pull-right top title1" ><span class="log1"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;&nbsp;Hello,</span> <a href="account.php" class="log log1">'.$name.'</a>&nbsp;|&nbsp;<a href="logout.php?q=account.php" class="log"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>&nbsp;Sign Out</button></a></span>';
+
 }?>
 
 </div></div>
@@ -74,8 +76,6 @@ echo '<span class="pull-right top title1" ><span class="log1"><span class="glyph
         <li <?php if(@$_GET['q']==0) echo'class="active"'; ?>><a href="dash.php?q=0">Quiz<span class="sr-only">(current)</span></a></li>
         <li <?php if(@$_GET['q']==1) echo'class="active"'; ?>><a href="dash.php?q=1">User</a></li>
 
-    <!--li <?php if(@$_GET['q']==2) echo'class="active"'; ?>><a href="dash.php?q=2">Ranking</a></li-->
-    
         <li class="dropdown <?php if(@$_GET['q']==4 || @$_GET['q']==5) echo'active"'; ?>">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Update Quiz<span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -83,8 +83,7 @@ echo '<span class="pull-right top title1" ><span class="log1"><span class="glyph
             <li><a href="dash.php?q=5">Remove Quiz</a></li>
 			
           </ul>
-        </li><li class="pull-right"> <a href="logout.php?q=account.php"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;&nbsp;Signout</a></li>
-		
+      
       </ul>
           </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -203,16 +202,6 @@ echo '
     
   </div>
 </div>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-12 control-label" for="tag"></label>  
-  <div class="col-md-12">
-  <input id="tag" name="tag" placeholder="Enter #tag which is used for searching" class="form-control input-md" type="text">
-    
-  </div>
-</div>
-
 
 <!-- Text input-->
 <div class="form-group">

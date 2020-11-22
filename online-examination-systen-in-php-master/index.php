@@ -242,6 +242,7 @@ On choosing a subject the test starts and the user may now tick desired answers 
 </div>
 </div>
 
+
 <!--Modal for admin login-->
 <div class="col-md-2">
 <a href="#" class="pull-right btn sub1" data-toggle="modal" data-target="#login"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;<span class="title1"><b>Admin</b></span></a></div>
