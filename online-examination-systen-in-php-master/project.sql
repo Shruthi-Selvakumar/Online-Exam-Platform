@@ -71,7 +71,7 @@ CREATE TABLE `history` (
   `eid` text NOT NULL,
   `score` int(11) NOT NULL,
   `level` int(11) NOT NULL,
-  `sahi` int(11) NOT NULL,
+  `correct` int(11) NOT NULL,
   `wrong` int(11) NOT NULL,
   `date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -80,7 +80,7 @@ CREATE TABLE `history` (
 -- Dumping data for table `history`
 --
 
-INSERT INTO `history` (`email`, `eid`, `score`, `level`, `sahi`, `wrong`, `date`) VALUES
+INSERT INTO `history` (`email`, `eid`, `score`, `level`, `correct`, `wrong`, `date`) VALUES
 ('admin@admin.com', '5fba1bacc85f0', 3, 3, 3, 0, '2020-11-22 08:09:12');
 
 -- --------------------------------------------------------
@@ -145,7 +145,7 @@ INSERT INTO `questions` (`eid`, `qid`, `qns`, `choice`, `sn`) VALUES
 CREATE TABLE `quiz` (
   `eid` text NOT NULL,
   `title` varchar(100) NOT NULL,
-  `sahi` int(11) NOT NULL,
+  `correct` int(11) NOT NULL,
   `wrong` int(11) NOT NULL,
   `total` int(11) NOT NULL,
   `time` bigint(20) NOT NULL,
@@ -158,7 +158,7 @@ CREATE TABLE `quiz` (
 -- Dumping data for table `quiz`
 --
 
-INSERT INTO `quiz` (`eid`, `title`, `sahi`, `wrong`, `total`, `time`, `intro`, `tag`, `date`) VALUES
+INSERT INTO `quiz` (`eid`, `title`, `correct`, `wrong`, `total`, `time`, `intro`, `tag`, `date`) VALUES
 ('5fba1bacc85f0', 'Computer Science ', 1, 0, 3, 10, '', '#cs', '2020-11-22 08:05:00');
 
 -- --------------------------------------------------------

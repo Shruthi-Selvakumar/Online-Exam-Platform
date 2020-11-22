@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Project Worlds || DASHBOARD </title>
+<title>Online Quiz Application</title>
 <link  rel="stylesheet" href="css/bootstrap.min.css"/>
  <link  rel="stylesheet" href="css/bootstrap-theme.min.css"/>    
  <link rel="stylesheet" href="css/main.css">
@@ -71,11 +71,13 @@ echo '<span class="pull-right top title1" ><span class="log1"><span class="glyph
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li <?php if(@$_GET['q']==0) echo'class="active"'; ?>><a href="dash.php?q=0">Tests<span class="sr-only">(current)</span></a></li>
+        <li <?php if(@$_GET['q']==0) echo'class="active"'; ?>><a href="dash.php?q=0">Quiz<span class="sr-only">(current)</span></a></li>
         <li <?php if(@$_GET['q']==1) echo'class="active"'; ?>><a href="dash.php?q=1">User</a></li>
-		<li <?php if(@$_GET['q']==2) echo'class="active"'; ?>><a href="dash.php?q=2">Ranking</a></li>
+
+    <!--li <?php if(@$_GET['q']==2) echo'class="active"'; ?>><a href="dash.php?q=2">Ranking</a></li-->
+    
         <li class="dropdown <?php if(@$_GET['q']==4 || @$_GET['q']==5) echo'active"'; ?>">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Quiz<span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Update Quiz<span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="dash.php?q=4">Add Quiz</a></li>
             <li><a href="dash.php?q=5">Remove Quiz</a></li>
@@ -102,18 +104,18 @@ $c=1;
 while($row = mysqli_fetch_array($result)) {
 	$title = $row['title'];
 	$total = $row['total'];
-	$sahi = $row['sahi'];
-    $time = $row['time'];
+	$correct = $row['correct'];
+  $time = $row['time'];
 	$eid = $row['eid'];
 $q12=mysqli_query($con,"SELECT score FROM history WHERE eid='$eid' AND email='$email'" )or die('Error98');
 $rowcount=mysqli_num_rows($q12);	
 if($rowcount == 0){
-	echo '<tr><td>'.$c++.'</td><td>'.$title.'</td><td>'.$total.'</td><td>'.$sahi*$total.'</td><td>'.$time.'&nbsp;min</td>
+	echo '<tr><td>'.$c++.'</td><td>'.$title.'</td><td>'.$total.'</td><td>'.$correct*$total.'</td><td>'.$time.'&nbsp;min</td>
 	<td><b><a href="account.php?q=quiz&step=2&eid='.$eid.'&n=1&t='.$total.'" class="pull-right btn sub1" style="margin:0px;background:#99cc32"><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>&nbsp;<span class="title1"><b>Start</b></span></a></b></td></tr>';
 }
 else
 {
-echo '<tr style="color:#99cc32"><td>'.$c++.'</td><td>'.$title.'&nbsp;<span title="This quiz is already solve by you" class="glyphicon glyphicon-ok" aria-hidden="true"></span></td><td>'.$total.'</td><td>'.$sahi*$total.'</td><td>'.$time.'&nbsp;min</td>
+echo '<tr style="color:#99cc32"><td>'.$c++.'</td><td>'.$title.'&nbsp;<span title="This quiz is already solve by you" class="glyphicon glyphicon-ok" aria-hidden="true"></span></td><td>'.$total.'</td><td>'.$correct*$total.'</td><td>'.$time.'&nbsp;min</td>
 	<td><b><a href="update.php?q=quizre&step=25&eid='.$eid.'&n=1&t='.$total.'" class="pull-right btn sub1" style="margin:0px;background:red"><span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>&nbsp;<span class="title1"><b>Restart</b></span></a></b></td></tr>';
 }
 }
@@ -122,32 +124,9 @@ echo '</table></div></div>';
 
 }
 
-//ranking start
-if(@$_GET['q']== 2) 
-{
-$q=mysqli_query($con,"SELECT * FROM rank  ORDER BY score DESC " )or die('Error223');
-echo  '<div class="panel title"><div class="table-responsive">
-<table class="table table-striped title1" >
-<tr style="color:red"><td><b>Rank</b></td><td><b>Name</b></td><td><b>Score</b></td></tr>';
-$c=0;
-while($row=mysqli_fetch_array($q) )
-{
-$e=$row['email'];
-$s=$row['score'];
-$q12=mysqli_query($con,"SELECT * FROM user WHERE email='$e' " )or die('Error231');
-while($row=mysqli_fetch_array($q12) )
-{
-$name=$row['name'];
-}
-$c++;
-echo '<tr><td style="color:#99cc32"><b>'.$c.'</b></td><td>'.$name.'</td><td>'.$s.'</td><td>';
-}
-echo '</table></div></div>';}
-
 ?>
+<!--Quiz closed-->
 
-
-<!--home closed-->
 <!--users start-->
 <?php if(@$_GET['q']==1) {
 
@@ -168,7 +147,7 @@ echo '</table></div></div>';
 }?>
 <!--user end-->
 
-<!--add quiz start-->
+<!--add Update quiz start-->
 <?php
 if(@$_GET['q']==4 && !(@$_GET['step']) ) {
 echo ' 
@@ -258,7 +237,7 @@ echo '
 
 }
 ?>
-<!--add quiz end-->
+<!--Update quiz end-->
 
 <!--add quiz step2 start-->
 <?php
@@ -331,8 +310,6 @@ echo '<div class="form-group">
 </fieldset>
 </form></div>';
 
-
-
 }
 ?><!--add quiz step 2 end-->
 
@@ -346,10 +323,10 @@ $c=1;
 while($row = mysqli_fetch_array($result)) {
 	$title = $row['title'];
 	$total = $row['total'];
-	$sahi = $row['sahi'];
+	$correct = $row['correct'];
     $time = $row['time'];
 	$eid = $row['eid'];
-	echo '<tr><td>'.$c++.'</td><td>'.$title.'</td><td>'.$total.'</td><td>'.$sahi*$total.'</td><td>'.$time.'&nbsp;min</td>
+	echo '<tr><td>'.$c++.'</td><td>'.$title.'</td><td>'.$total.'</td><td>'.$correct*$total.'</td><td>'.$time.'&nbsp;min</td>
 	<td><b><a href="update.php?q=rmquiz&eid='.$eid.'" class="pull-right btn sub1" style="margin:0px;background:red"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span>&nbsp;<span class="title1"><b>Remove</b></span></a></b></td></tr>';
 }
 $c=0;
