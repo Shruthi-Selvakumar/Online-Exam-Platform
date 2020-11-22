@@ -60,7 +60,7 @@ function validateForm()
 <div class="col-lg-6">
 <span class="logo">Online Quiz Application</span></div>
 <div class="col-md-2 col-md-offset-4">
-<a href="#" class="pull-right btn sub1" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;<span class="title1"><b>Sign-In</b></span></a></div>
+<a href="#" class="pull-right btn sub1" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;<span class="title1"><b>log-In</b></span></a></div>
 
 <!--sign in modal start-->
 <div class="modal fade" id="myModal">
