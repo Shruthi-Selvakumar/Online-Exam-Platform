@@ -62,7 +62,7 @@ function validateForm()
 <div class="col-md-2 col-md-offset-4">
 <a href="#" class="pull-right btn sub1" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;<span class="title1"><b>log-In</b></span></a></div>
 
-<!--sign in modal start-->
+<!--Log in modal start-->
 <div class="modal fade" id="myModal">
   <div class="modal-dialog">
     <div class="modal-content title1">
@@ -104,7 +104,7 @@ function validateForm()
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
-<!--sign in modal closed-->
+<!--log in modal closed-->
 
 </div><!--header row closed-->
 </div>
@@ -174,14 +174,78 @@ function validateForm()
 </div></div>
 </div><!--container end-->
 
-<!--Footer start-->
-<div class="row footer">
-
-<div class="form-group" align="center">
-<a href="#" data-toggle="modal" data-target="#login">Admin Login</a>
+</div>
 </div>
 
+<!--Footer start-->
+<div class="row footer">
+<!--contact-->
+
+<div class="col-md-5">
+<a href="#" class="pull-right btn sub1" data-toggle="modal" data-target="#myModal2"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;<span class="title1"><b>contact</b></span></a></div>
+<div class="modal fade" id="myModal2">
+  <div class="modal-dialog">
+    <div class="modal-content title1">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title title1"><span style="color:black">About</span></h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal" >
+<fieldset>
+
+<div class="form-group">
+  <div class="col-md-12">
+    <h2>Online Quiz Portal By - <h2>
+        <div class="col-md-12">
+        <h6> Meghana Rao - BL.EN.U4CSE18071 <h6>
+        <h6>Navya KNSS - BL.EN.U4CSE18079<h6>
+        <h6>R Harish - BL.EN.U4CSE18097<h6>
+        <h6>Raghu Ram Chadalawada - BL.EN.U4CSE18098<h6>
+        <h6>S Shruthi - BL.EN.U4CSE18104 <h6>
+    </div>
+  </div>
+</div>
+</fieldset>
+</form>
+</div>
+</div>
+</div>
+</div>
+
+<!--About-->
+<div class="col-md-2">
+<a href="#" class="pull-right btn sub1" data-toggle="modal" data-target="#myModal3"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>&nbsp;<span class="title1"><b>About</b></span></a></div>
+<div class="modal fade" id="myModal3">
+  <div class="modal-dialog">
+    <div class="modal-content title1">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title title1"><span style="color:black">About</span></h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal" >
+<fieldset>
+
+<div class="form-group">
+  <div class="col-md-12">
+    <h2>About - <h2>
+
+    </div>
+  </div>
+</div>
+</fieldset>
+</form>
+</div>
+</div>
+</div>
+
+
+
+
 <!--Modal for admin login-->
+<div class="col-md-2">
+<a href="#" class="pull-right btn sub1" data-toggle="modal" data-target="#login"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;<span class="title1"><b>Admin</b></span></a></div>
 	<div class="modal fade" id="login">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -215,19 +279,6 @@ function validateForm()
 </div><!-- /.modal -->
 </div>
 <!--footer end-->
-
-<div class="form-group" >
-
-<h2>Online Quiz Portal By - <h2>
-<div 
-class="col-md-3">
-<h6> Meghana Rao - BL.EN.U4CSE18071 <h6>
-<h6>Navya KNSS - BL.EN.U4CSE18079<h6>
-<h6>R Harish - BL.EN.U4CSE18097<h6>
-<h6>Raghu Ram Chadalawada - BL.EN.U4CSE18098<h6>
-<h6>S Shruthi - BL.EN.U4CSE18104 <h6>
-</div>
-</div>
 
 </body>
 </html>
