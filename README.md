@@ -35,8 +35,5 @@ manner to all the users.
   4. Viewing all student marks
   5. Sending an annual or half annual report to students
   6. Logout
-  
-  This is HARISH and idk how to use github XD
-  
-  i made this change at 14:57
+
 
