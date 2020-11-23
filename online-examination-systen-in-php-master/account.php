@@ -60,7 +60,7 @@ echo '<span class="pull-right top title1" ><span class="log1"><span class="glyph
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#"><b>Netcamp</b></a>
+      <a class="navbar-brand" href="#"><b>Dashboard</b></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -101,11 +101,11 @@ $q12=mysqli_query($con,"SELECT score FROM history WHERE eid='$eid' AND email='$e
 $rowcount=mysqli_num_rows($q12);	
 if($rowcount == 0){
 	echo '<tr><td>'.$c++.'</td><td>'.$title.'</td><td>'.$total.'</td><td>'.$correct*$total.'</td><td>'.$time.'&nbsp;min</td>
-	<td><b><a href="account.php?q=quiz&step=2&eid='.$eid.'&n=1&t='.$total.'" class="pull-right btn sub1" style="margin:0px;background:#99cc32"><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>&nbsp;<span class="title1"><b>Start</b></span></a></b></td></tr>';
+	<td><b><a href="account.php?q=quiz&step=2&eid='.$eid.'&n=1&t='.$total.'" class="pull-right btn sub1" style="margin:0px;background:#99CC32"><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>&nbsp;<span class="title1"><b>Start</b></span></a></b></td></tr>';
 }
 else
 {
-echo '<tr style="color:#99cc32"><td>'.$c++.'</td><td>'.$title.'&nbsp;<span title="This quiz is already solve by you" class="glyphicon glyphicon-ok" aria-hidden="true"></span></td><td>'.$total.'</td><td>'.$correct*$total.'</td><td>'.$time.'&nbsp;min</td>
+echo '<tr style="color:#99CC32"><td>'.$c++.'</td><td>'.$title.'&nbsp;<span title="You Already Solved This Quiz" class="glyphicon glyphicon-ok" aria-hidden="true"></span></td><td>'.$total.'</td><td>'.$correct*$total.'</td><td>'.$time.'&nbsp;min</td>
 	<td><b><a href="update.php?q=quizre&step=25&eid='.$eid.'&n=1&t='.$total.'" class="pull-right btn sub1" style="margin:0px;background:red"><span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>&nbsp;<span class="title1"><b>Restart</b></span></a></b></td></tr>';
 }
 }
@@ -177,7 +177,7 @@ $w=$row['wrong'];
 $r=$row['correct'];
 $qa=$row['level'];
 echo '<tr style="color:#66CCFF"><td>Total Questions</td><td>'.$qa.'</td></tr>
-      <tr style="color:#99cc32"><td>right Answer&nbsp;<span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></td><td>'.$r.'</td></tr> 
+      <tr style="color:#2409AE"><td>Right Answer&nbsp;<span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></td><td>'.$r.'</td></tr> 
 	  <tr style="color:red"><td>Wrong Answer&nbsp;<span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></td><td>'.$w.'</td></tr>
 	  <tr style="color:#66CCFF"><td>Score&nbsp;<span class="glyphicon glyphicon-star" aria-hidden="true"></span></td><td>'.$s.'</td></tr>';
 }
@@ -239,7 +239,7 @@ $gender=$row['gender'];
 $college=$row['college'];
 }
 $c++;
-echo '<tr><td style="color:#99cc32"><b>'.$c.'</b></td><td>'.$name.'</td><td>'.$gender.'</td><td>'.$college.'</td><td>'.$s.'</td><td>';
+echo '<tr><td style="color:#2409AE"><b>'.$c.'</b></td><td>'.$name.'</td><td>'.$gender.'</td><td>'.$college.'</td><td>'.$s.'</td><td>';
 }
 echo '</table></div></div>';}
 ?>
@@ -250,13 +250,13 @@ echo '</table></div></div>';}
 <!--Footer start-->
 <div class="row footer">
 <div class="col-md-3">
-<a href="#" class="pull-right btn sub1" data-toggle="modal" data-target="#myModal2"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;<span class="title1"><b>contact</b></span></a></div>
+<a href="#" class="pull-right btn sub1" data-toggle="modal" data-target="#myModal2"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;<span class="title1"><b>Contact</b></span></a></div>
 <div class="modal fade" id="myModal2">
   <div class="modal-dialog">
     <div class="modal-content title1">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title title1"><span style="color:black">About</span></h4>
+        <h4 class="modal-title title1"><span style="color:black">Reg No</span></h4>
       </div>
       <div class="modal-body">
         <form class="form-horizontal" >
@@ -281,9 +281,41 @@ echo '</table></div></div>';}
 </div>
 </div>
 
+<!--Modal for About -->
+<div class="row footer">
+<div class="col-md-3">
+<a href="#" class="pull-right btn sub1" data-toggle="modal" data-target="#myModal3"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>&nbsp;<span class="title1"><b>About</b></span></a></div>
+<div class="modal fade" id="myModal3">
+  <div class="modal-dialog">
+    <div class="modal-content title1">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title title1"><span style="color:black">About</span></h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal" >
+<fieldset>
+
+<div class="form-group">
+  <div class="col-md-12">
+    <h2>Online Quiz Portal By - <h2>
+        <div class="col-md-12">
+        <p>This is an online test system that allows users to take online tests and automatically generates results based on answers marked by the admin. The system is designed for any number of subjects
+On choosing a subject the test starts and the user may now tick desired answers within the time limit. After the time ends the system goes to the result page and shows the user’s score to them.<p>
+
+    </div>
+  </div>
+</div>
+</fieldset>
+</form>
+</div>
+</div>
+</div>
+</div>
+
 <!--Modal for admin login-->
 
-<div class="col-md-6 box">
+<div class="col-md-3 box">
 <a href="#" class="pull-right btn sub1" data-toggle="modal" data-target="#login"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;<span class="title1"><b>Admin</b></span></a></div>
 <div class="modal fade" id="login">
   <div class="modal-dialog">
