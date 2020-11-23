@@ -6,7 +6,7 @@
 
 <title>Online Quiz Application </title>
 <link  rel="stylesheet" href="css/bootstrap.min.css"/>
- <link  rel="stylesheet" href="css/bootstrap-theme.min.css"/>  
+ <link  rel="stylesheet" href="css/bootstrap-theme.min.css"/>    
  <link rel="stylesheet" href="css/main.css">
  <link  rel="stylesheet" href="css/font.css">
  <script src="js/jquery.js" type="text/javascript"></script>
@@ -31,15 +31,14 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Passwords mus
 <div class="col-lg-6">
 <span class="logo">Online Quiz Application</span></div>
 <div class="col-md-2 col-md-offset-4">
-<a href="#" class="pull-right btn sub1" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;<span class="title1"><b>log-In</b></span></a></div>
-
-<!--Log in modal start-->
+<a href="#" class="pull-right btn sub1" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;<span class="title1"><b>Log In</b></span></a></div>
+<!--sign in modal start-->
 <div class="modal fade" id="myModal">
   <div class="modal-dialog">
     <div class="modal-content title1">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title title1"><span style="color:green">Log In</span></h4>
+        <h4 class="modal-title title1"><span style="color:black">Log In</span></h4>
       </div>
       <div class="modal-body">
         <form class="form-horizontal" action="login.php?q=index.php" method="POST">
@@ -50,7 +49,7 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Passwords mus
 <div class="form-group">
   <label class="col-md-3 control-label" for="email"></label>  
   <div class="col-md-6">
-  <input id="email" name="email" placeholder="Enter your Email-ID" class="form-control input-md" type="email">
+  <input id="email" name="email" placeholder="Enter Your Email-ID" class="form-control input-md" type="email">
     
   </div>
 </div>
@@ -60,7 +59,7 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Passwords mus
 <div class="form-group">
   <label class="col-md-3 control-label" for="password"></label>
   <div class="col-md-6">
-    <input id="password" name="password" placeholder="Enter your Password" class="form-control input-md" type="password">
+    <input id="password" name="password" placeholder="Enter Your Password" class="form-control input-md" type="password">
     
   </div>
 </div>
@@ -68,14 +67,14 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Passwords mus
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary">Log-In</button>
+        <button type="submit" class="btn btn-primary">Log In</button>
 		</fieldset>
 </form>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
-<!--log in modal closed-->
+<!--sign in modal closed-->
 
 </div><!--header row closed-->
 </div>
@@ -85,8 +84,7 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Passwords mus
 
 <div class="col-md-7"></div>
 <div class="col-md-4 panel">
-
-<!-- sign up form begins -->  
+<!-- sign in form begins -->  
   <form class="form-horizontal" name="form" action="sign.php?q=account.php" onSubmit="return validateForm()" method="POST">
 <fieldset>
 
@@ -95,11 +93,10 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Passwords mus
 <div class="form-group">
   <label class="col-md-12 control-label" for="name"></label>  
   <div class="col-md-12">
-  <input id="name" name="name" placeholder="Enter Your Name" class="form-control input-md" type="text">
+  <input id="name" name="name" placeholder="Enter your name" class="form-control input-md" type="text">
     
   </div>
 </div>
-
 
 <!-- Text input-->
 <div class="form-group">
@@ -125,7 +122,7 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Passwords mus
 <div class="form-group">
   <label class="col-md-12 control-label title1" for="email"></label>
   <div class="col-md-12">
-    <input id="email" name="email" placeholder="Enter Your Email-ID" class="form-control input-md" type="email">
+    <input id="email" name="email" placeholder="Enter your email-id" class="form-control input-md" type="email">
     
   </div>
 </div>
@@ -144,13 +141,13 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Passwords mus
 <div class="form-group">
   <label class="col-md-12 control-label" for="password"></label>
   <div class="col-md-12">
-    <input id="password" name="password" placeholder="Enter Your password" class="form-control input-md" type="password">
+    <input id="password" name="password" placeholder="Enter your password" class="form-control input-md" type="password">
     
   </div>
 </div>
 
 <div class="form-group">
-  <label class="col-md-12 control-label" for="cpassword"></label>
+  <label class="col-md-12control-label" for="cpassword"></label>
   <div class="col-md-12">
     <input id="cpassword" name="cpassword" placeholder="Confirm Password" class="form-control input-md" type="password">
     
@@ -162,7 +159,7 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Passwords mus
 <div class="form-group">
   <label class="col-md-12 control-label" for=""></label>
   <div class="col-md-12"> 
-    <input  type="submit" class="sub" value="Sign-Up" class="btn btn-primary"/>
+    <input  type="submit" class="sub" value="sign up" class="btn btn-primary"/>
   </div>
 </div>
 
@@ -174,9 +171,7 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Passwords mus
 
 <!--Footer start-->
 <div class="row footer">
-<!--contact-->
-
-<div class="col-md-5">
+<div class="col-md-3">
 <a href="#" class="pull-right btn sub1" data-toggle="modal" data-target="#myModal2"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;<span class="title1"><b>contact</b></span></a></div>
 <div class="modal fade" id="myModal2">
   <div class="modal-dialog">
@@ -208,45 +203,16 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Passwords mus
 </div>
 </div>
 
-<!--About-->
-<div class="col-md-2">
-<a href="#" class="pull-right btn sub1" data-toggle="modal" data-target="#myModal3"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>&nbsp;<span class="title1"><b>About</b></span></a></div>
-<div class="modal fade" id="myModal3">
+<!--Modal for admin login-->
+
+<div class="col-md-6 box">
+<a href="#" class="pull-right btn sub1" data-toggle="modal" data-target="#login"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;<span class="title1"><b>Admin</b></span></a></div>
+<div class="modal fade" id="login">
   <div class="modal-dialog">
     <div class="modal-content title1">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title title1"><span style="color:black">About</span></h4>
-      </div>
-      <div class="modal-body">
-        <form class="form-horizontal" >
-<fieldset>
-
-<div class="form-group">
-  <div class="col-md-12">
-    <h2>About - <h2>
-    <p>This is an online test system that allows users to take online tests and automatically generates results based on answers marked by the admin. The system is designed for any number of subjects
-On choosing a subject the test starts and the user may now tick desired answers within the time limit. After the time ends the system goes to the result page and shows the user’s score to them.<p>
-
-    </div>
-  </div>
-</div>
-</fieldset>
-</form>
-</div>
-</div>
-</div>
-
-
-<!--Modal for admin login-->
-<div class="col-md-2">
-<a href="#" class="pull-right btn sub1" data-toggle="modal" data-target="#login"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;<span class="title1"><b>Admin</b></span></a></div>
-	<div class="modal fade" id="login">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title"><span style="color:green;font-family:'typo' ">LOGIN</span></h4>
+        <h4 class="modal-title"><span style="color:black;font-family:'typo' ">LOGIN</span></h4>
       </div>
       <div class="modal-body title1">
 <div class="row">
@@ -254,7 +220,7 @@ On choosing a subject the test starts and the user may now tick desired answers 
 <div class="col-md-6">
 <form role="form" method="post" action="admin.php?q=index.php">
 <div class="form-group">
-<input type="text" name="uname" maxlength="20"  placeholder="Admin User-ID" class="form-control"/> 
+<input type="text" name="uname" maxlength="20"  placeholder="Admin user id" class="form-control"/> 
 </div>
 <div class="form-group">
 <input type="password" name="password" maxlength="15" placeholder="Password" class="form-control"/>
@@ -264,7 +230,6 @@ On choosing a subject the test starts and the user may now tick desired answers 
 </div>
 </form>
 </div><div class="col-md-3"></div></div>
-
       </div>
       <!--<div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -272,8 +237,9 @@ On choosing a subject the test starts and the user may now tick desired answers 
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
-</div>
 <!--footer end-->
+
 
 </body>
 </html>
+

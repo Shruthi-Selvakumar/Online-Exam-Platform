@@ -108,7 +108,7 @@ font-family:'typo';
 .footer a
 {
 margin:25px;
-color:orange;
+color:rgb(0, 0, 0);
 text-decoration:none;
 font: 15px "Century Gothic", "Times Roman", sans-serif;
 
@@ -116,9 +116,9 @@ font: 15px "Century Gothic", "Times Roman", sans-serif;
 .footer a:hover
 {
 text-decoration:none;
-color:#9acd32;
+color:#979797;
 border-top:2px solid;
-border-color:orange;
+border-color:rgb(0, 0, 0);
 }
 
 .box
@@ -135,7 +135,7 @@ margin-top:20px;
 .log1
 {
 font: 15px 'Ubuntu', sans-serif;
-color:orange;
+color:rgb(0, 0, 0);
 margin-left:10px;
 }
 
@@ -144,7 +144,7 @@ margin-left:10px;
 margin:10px;
 margin-right:60px;
 margin-left:5px;
-color:orange;
+color:rgb(0, 0, 0);
 text-decoration:none;
 font-size:20px;
 font-size:15px;
@@ -153,6 +153,6 @@ font-size:15px;
 {
 color:#9acd32;
 border-top:2px solid;
-border-color:orange;
+border-color:rgb(0, 0, 0);
 text-decoration:none;
 }

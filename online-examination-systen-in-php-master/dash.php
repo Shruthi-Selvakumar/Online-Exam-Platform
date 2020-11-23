@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Online Quiz Application</title>
+<title>Project Worlds || DASHBOARD </title>
 <link  rel="stylesheet" href="css/bootstrap.min.css"/>
  <link  rel="stylesheet" href="css/bootstrap-theme.min.css"/>    
  <link rel="stylesheet" href="css/main.css">
@@ -49,8 +49,7 @@ else
 $name = $_SESSION['name'];;
 
 include_once 'dbConnection.php';
-echo '<span class="pull-right top title1" ><span class="log1"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;&nbsp;Hello,</span> <a href="account.php" class="log log1">'.$name.'</a>&nbsp;|&nbsp;<a href="logout.php?q=account.php" class="log"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>&nbsp;Sign Out</button></a></span>';
-
+echo '<span class="pull-right top title1" ><span class="log1"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;&nbsp;Hello,</span> <a href="account.php" class="log log1">'.$name.'</a>&nbsp;|&nbsp;<a href="logout.php?q=account.php" class="log"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>&nbsp;Signout</button></a></span>';
 }?>
 
 </div></div>
@@ -72,17 +71,18 @@ echo '<span class="pull-right top title1" ><span class="log1"><span class="glyph
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li <?php if(@$_GET['q']==0) echo'class="active"'; ?>><a href="dash.php?q=0">Quiz<span class="sr-only">(current)</span></a></li>
+        <li <?php if(@$_GET['q']==0) echo'class="active"'; ?>><a href="dash.php?q=0">Home<span class="sr-only">(current)</span></a></li>
         <li <?php if(@$_GET['q']==1) echo'class="active"'; ?>><a href="dash.php?q=1">User</a></li>
-
+		<li <?php if(@$_GET['q']==2) echo'class="active"'; ?>><a href="dash.php?q=2">Ranking</a></li>
         <li class="dropdown <?php if(@$_GET['q']==4 || @$_GET['q']==5) echo'active"'; ?>">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Update Quiz<span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Quiz<span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="dash.php?q=4">Add Quiz</a></li>
             <li><a href="dash.php?q=5">Remove Quiz</a></li>
 			
           </ul>
-      
+        </li><li class="pull-right"> <a href="logout.php?q=account.php"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;&nbsp;Signout</a></li>
+		
       </ul>
           </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -103,7 +103,7 @@ while($row = mysqli_fetch_array($result)) {
 	$title = $row['title'];
 	$total = $row['total'];
 	$correct = $row['correct'];
-  $time = $row['time'];
+    $time = $row['time'];
 	$eid = $row['eid'];
 $q12=mysqli_query($con,"SELECT score FROM history WHERE eid='$eid' AND email='$email'" )or die('Error98');
 $rowcount=mysqli_num_rows($q12);	
@@ -113,7 +113,7 @@ if($rowcount == 0){
 }
 else
 {
-echo '<tr style="color:#99cc32"><td>'.$c++.'</td><td>'.$title.'&nbsp;<span title="You already solved this Quiz" class="glyphicon glyphicon-ok" aria-hidden="true"></span></td><td>'.$total.'</td><td>'.$correct*$total.'</td><td>'.$time.'&nbsp;min</td>
+echo '<tr style="color:#99cc32"><td>'.$c++.'</td><td>'.$title.'&nbsp;<span title="This quiz is already solve by you" class="glyphicon glyphicon-ok" aria-hidden="true"></span></td><td>'.$total.'</td><td>'.$correct*$total.'</td><td>'.$time.'&nbsp;min</td>
 	<td><b><a href="update.php?q=quizre&step=25&eid='.$eid.'&n=1&t='.$total.'" class="pull-right btn sub1" style="margin:0px;background:red"><span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>&nbsp;<span class="title1"><b>Restart</b></span></a></b></td></tr>';
 }
 }
@@ -122,9 +122,32 @@ echo '</table></div></div>';
 
 }
 
+//ranking start
+if(@$_GET['q']== 2) 
+{
+$q=mysqli_query($con,"SELECT * FROM rank  ORDER BY score DESC " )or die('Error223');
+echo  '<div class="panel title"><div class="table-responsive">
+<table class="table table-striped title1" >
+<tr style="color:red"><td><b>Rank</b></td><td><b>Name</b></td><td><b>Gender</b></td><td><b>College</b></td><td><b>Score</b></td></tr>';
+$c=0;
+while($row=mysqli_fetch_array($q) )
+{
+$e=$row['email'];
+$s=$row['score'];
+$q12=mysqli_query($con,"SELECT * FROM user WHERE email='$e' " )or die('Error231');
+while($row=mysqli_fetch_array($q12) )
+{
+$name=$row['name'];
+$gender=$row['gender'];
+$college=$row['college'];
+}
+$c++;
+echo '<tr><td style="color:#99cc32"><b>'.$c.'</b></td><td>'.$name.'</td><td>'.$gender.'</td><td>'.$college.'</td><td>'.$s.'</td><td>';
+}
+echo '</table></div></div>';}
 ?>
-<!--Quiz closed-->
 
+<!--home closed-->
 <!--users start-->
 <?php if(@$_GET['q']==1) {
 
@@ -133,12 +156,12 @@ echo  '<div class="panel"><div class="table-responsive"><table class="table tabl
 <tr><td><b>S.N.</b></td><td><b>Name</b></td><td><b>Gender</b></td><td><b>College</b></td><td><b>Email</b></td><td><b>Mobile</b></td><td></td></tr>';
 $c=1;
 while($row = mysqli_fetch_array($result)) {
-  $name = $row['name'];
-  $mob = $row['mob'];
+	$name = $row['name'];
+	$mob = $row['mob'];
 	$gender = $row['gender'];
-  $email = $row['email'];
-  $college = $row['college'];
-  echo '<tr><td>'.$c++.'</td><td>'.$name.'</td><td>'.$gender.'</td><td>'.$college.'</td><td>'.$email.'</td><td>'.$mob.'</td>
+    $email = $row['email'];
+	$college = $row['college'];
+	echo '<tr><td>'.$c++.'</td><td>'.$name.'</td><td>'.$gender.'</td><td>'.$college.'</td><td>'.$email.'</td><td>'.$mob.'</td>
 	<td><a title="Delete User" href="update.php?demail='.$email.'"><b><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></b></a></td></tr>';
 }
 $c=0;
@@ -147,7 +170,7 @@ echo '</table></div></div>';
 }?>
 <!--user end-->
 
-<!--add Update quiz start-->
+<!--add quiz start-->
 <?php
 if(@$_GET['q']==4 && !(@$_GET['step']) ) {
 echo ' 
@@ -206,6 +229,16 @@ echo '
 
 <!-- Text input-->
 <div class="form-group">
+  <label class="col-md-12 control-label" for="tag"></label>  
+  <div class="col-md-12">
+  <input id="tag" name="tag" placeholder="Enter #tag which is used for searching" class="form-control input-md" type="text">
+    
+  </div>
+</div>
+
+
+<!-- Text input-->
+<div class="form-group">
   <label class="col-md-12 control-label" for="desc"></label>  
   <div class="col-md-12">
   <textarea rows="8" cols="8" name="desc" class="form-control" placeholder="Write description here..."></textarea>  
@@ -227,7 +260,7 @@ echo '
 
 }
 ?>
-<!--Update quiz end-->
+<!--add quiz end-->
 
 <!--add quiz step2 start-->
 <?php
