@@ -97,19 +97,62 @@ font-family:'typo';
     color:#000000;
 }
 
-
 .footer
 {
-    margin-top: 15px;
+    font-size: 15px;
     text-align:center;
     border-top:1px solid;
     border-color:#000000;
     background-color:#c1ccff;
-    font: 15px "Century Gothic", "Times Roman", sans-serif;
 }
-
-.panel
+.footer a
 {
-    height: 520px;
+margin:25px;
+color:orange;
+text-decoration:none;
+font: 15px "Century Gothic", "Times Roman", sans-serif;
+
+}
+.footer a:hover
+{
+text-decoration:none;
+color:#9acd32;
+border-top:2px solid;
+border-color:orange;
 }
 
+.box
+{
+padding:9px;
+}
+hr{
+color:#000000;
+}
+.top
+{
+margin-top:20px;
+}
+.log1
+{
+font: 15px 'Ubuntu', sans-serif;
+color:orange;
+margin-left:10px;
+}
+
+.log
+{
+margin:10px;
+margin-right:60px;
+margin-left:5px;
+color:orange;
+text-decoration:none;
+font-size:20px;
+font-size:15px;
+}
+.log:hover
+{
+color:#9acd32;
+border-top:2px solid;
+border-color:orange;
+text-decoration:none;
+}
