@@ -7,9 +7,7 @@
 <title>Online Quiz Application </title>
 <link  rel="stylesheet" href="css/bootstrap.min.css"/>
  <link  rel="stylesheet" href="css/bootstrap-theme.min.css"/>  
- <link rel="stylesheet" href="css/main.css?version=1">  
- 
- 
+ <link rel="stylesheet" href="css/main.css">
  <link  rel="stylesheet" href="css/font.css">
  <script src="js/jquery.js" type="text/javascript"></script>
 
@@ -19,36 +17,9 @@
 {echo'<script>alert("'.@$_GET['w'].'");</script>';}
 ?>
 <script>
-function validateForm() 
-{
-  var y = document.forms["form"]["name"].value;	var letters = /^[A-Za-z]+$/;if (y == null || y == "") 
-  {
-    alert("Name must be filled out.");
-    return false;
-  }
-  var x = document.forms["form"]["email"].value;var atpos = x.indexOf("@");
-  var dotpos = x.lastIndexOf(".");
-  if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) 
-  {
-    alert("Not a valid e-mail address.");return false;
-  }
-  var a = document.forms["form"]["password"].value;
-  if(a == null || a == "")
-  {
-    alert("Password must be filled out");return false;
-  }
-  if(a.length<5 || a.length>25)
-  {
-    alert("Passwords must be 5 to 25 characters long.");
-    return false;
-  }
-  var b = document.forms["form"]["cpassword"].value;
-  if (a!=b)
-  {
-    alert("Passwords must match.");
-    return false;
-  }
-}
+function validateForm() {var y = document.forms["form"]["name"].value;	var letters = /^[A-Za-z]+$/;if (y == null || y == "") {alert("Name must be filled out.");return false;}var z =document.forms["form"]["college"].value;if (z == null || z == "") {alert("college must be filled out.");return false;}var x = document.forms["form"]["email"].value;var atpos = x.indexOf("@");
+var dotpos = x.lastIndexOf(".");if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {alert("Not a valid e-mail address.");return false;}var a = document.forms["form"]["password"].value;if(a == null || a == ""){alert("Password must be filled out");return false;}if(a.length<5 || a.length>25){alert("Passwords must be 5 to 25 characters long.");return false;}
+var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Passwords must match.");return false;}}
 </script>
 
 
@@ -200,7 +171,6 @@ function validateForm()
 </div><!--col-md-6 end-->
 </div></div>
 </div><!--container end-->
-
 
 <!--Footer start-->
 <div class="row footer">
