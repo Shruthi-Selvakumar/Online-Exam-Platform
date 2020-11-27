@@ -1,5 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html >
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -32,7 +32,7 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Passwords mus
 <span class="logo">Online Quiz Application</span></div>
 <div class="col-md-2 col-md-offset-4">
 <a href="#" class="pull-right btn sub1" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;<span class="title1"><b>Log In</b></span></a></div>
-<!--sign in modal start-->
+<!--sign in modal  -->
 <div class="modal fade" id="myModal">
   <div class="modal-dialog">
     <div class="modal-content title1">
@@ -71,20 +71,18 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Passwords mus
 		</fieldset>
 </form>
       </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-<!--sign in modal closed-->
+    </div>
+  </div>
+</div>
 
-</div><!--header row closed-->
+</div>
 </div>
 
 <div class="bg1">
 <div class="row">
 
 <div class="col-md-7"></div>
-<div class="col-md-4 panel">
-<!-- sign in form begins -->  
+<div class="col-md-4 panel">  
   <form class="form-horizontal" name="form" action="sign.php?q=account.php" onSubmit="return validateForm()" method="POST">
 <fieldset>
 
@@ -149,17 +147,16 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Passwords mus
 <div class="form-group">
   <label class="col-md-12control-label" for="cpassword"></label>
   <div class="col-md-12">
-    <input id="cpassword" name="cpassword" placeholder="Confirm Password" class="form-control input-md" type="password">
+    <input id="cpassword" name="cpassword" placeholder="Conform Password" class="form-control input-md" type="password">
     
   </div>
 </div>
 <?php if(@$_GET['q7'])
 { echo'<p style="color:red;font-size:15px;">'.@$_GET['q7'];}?>
-<!-- Button -->
 <div class="form-group">
   <label class="col-md-12 control-label" for=""></label>
   <div class="col-md-12"> 
-    <input  type="submit" class="sub" value="sign up" class="btn btn-primary"/>
+    <input  type="submit" class="sub" value=" Sign Up " class="btn btn-primary"/>
   </div>
 </div>
 
@@ -169,45 +166,10 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Passwords mus
 </div></div>
 </div><!--container end-->
 
-<!--Footer start-->
 <div class="row footer">
 <div class="col-md-3">
-<a href="#" class="pull-right btn sub1" data-toggle="modal" data-target="#myModal2"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;<span class="title1"><b>Contact</b></span></a></div>
+<a href="#" class="pull-right btn sub1" data-toggle="modal" data-target="#myModal2"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;<span class="title1"><b>contact</b></span></a></div>
 <div class="modal fade" id="myModal2">
-  <div class="modal-dialog">
-    <div class="modal-content title1">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title title1"><span style="color:black">Reg No</span></h4>
-      </div>
-      <div class="modal-body">
-        <form class="form-horizontal" >
-<fieldset>
-
-<div class="form-group">
-  <div class="col-md-12">
-    <h2>Online Quiz Portal By - <h2>
-        <div class="col-md-12">
-        <h6> Meghana Rao - BL.EN.U4CSE18071 <h6>
-        <h6>Navya KNSS - BL.EN.U4CSE18079<h6>
-        <h6>R Harish - BL.EN.U4CSE18097<h6>
-        <h6>Raghu Ram Chadalawada - BL.EN.U4CSE18098<h6>
-        <h6>S Shruthi - BL.EN.U4CSE18104 <h6>
-    </div>
-  </div>
-</div>
-</fieldset>
-</form>
-</div>
-</div>
-</div>
-</div>
-
-<!--Modal for About -->
-<div class="row footer">
-<div class="col-md-3">
-<a href="#" class="pull-right btn sub1" data-toggle="modal" data-target="#myModal3"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>&nbsp;<span class="title1"><b>About</b></span></a></div>
-<div class="modal fade" id="myModal3">
   <div class="modal-dialog">
     <div class="modal-content title1">
       <div class="modal-header">
@@ -222,9 +184,11 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Passwords mus
   <div class="col-md-12">
     <h2>Online Quiz Portal By - <h2>
         <div class="col-md-12">
-        <p>This is an online test system that allows users to take online tests and automatically generates results based on answers marked by the admin. The system is designed for any number of subjects
-On choosing a subject the test starts and the user may now tick desired answers within the time limit. After the time ends the system goes to the result page and shows the user’s score to them.<p>
-
+        <h6> Meghana Rao - BL.EN.U4CSE18071 <h6>
+        <h6>  Navya KNSS - BL.EN.U4CSE18079<h6>
+        <h6>R Harish - BL.EN.U4CSE18097<h6>
+        <h6> Raghu Ram  - BL.EN.U4CSE18098<h6>
+        <h6> S Shruthi - BL.EN.U4CSE18104 <h6>
     </div>
   </div>
 </div>
@@ -237,7 +201,7 @@ On choosing a subject the test starts and the user may now tick desired answers 
 
 <!--Modal for admin login-->
 
-<div class="col-md-3 box">
+<div class="col-md-6 box">
 <a href="#" class="pull-right btn sub1" data-toggle="modal" data-target="#login"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;<span class="title1"><b>Admin</b></span></a></div>
 <div class="modal fade" id="login">
   <div class="modal-dialog">
@@ -263,16 +227,12 @@ On choosing a subject the test starts and the user may now tick desired answers 
 </form>
 </div><div class="col-md-3"></div></div>
       </div>
-      <!--<div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>-->
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-<!--footer end-->
+      
+    </div>
+  </div>
+</div>
 
 
 </body>
 </html>
-
 

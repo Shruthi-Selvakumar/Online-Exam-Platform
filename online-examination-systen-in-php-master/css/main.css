@@ -9,7 +9,6 @@ background-attachment:fixed;
 }
 .bg
 {
-background:url(../image/images.png);
 min-height:540px;
 }
 .bg1
@@ -117,7 +116,7 @@ font: 15px "Century Gothic", "Times Roman", sans-serif;
 .footer a:hover
 {
 text-decoration:none;
-color:#270606;
+color:#979797;
 border-top:2px solid;
 border-color:rgb(0, 0, 0);
 }
@@ -152,7 +151,7 @@ font-size:15px;
 }
 .log:hover
 {
-color:#284177;
+color:#9acd32;
 border-top:2px solid;
 border-color:rgb(0, 0, 0);
 text-decoration:none;
