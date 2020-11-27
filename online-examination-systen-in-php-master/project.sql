@@ -56,9 +56,9 @@ CREATE TABLE `answer` (
 --
 
 INSERT INTO `answer` (`qid`, `ansid`) VALUES
-('5fbb8bf363d4f' ,'5fbb8bf364e53'),
-('5fbb8bf367171' , '5fbb8bf367922'),
-('5fbb8bf3695de' , '5fbb8bf369ba7');
+('5fc0fd3cca124','5fc0fd3ccb1b0'),
+('5fc0fd3ccd88d' , '5fc0fd3cce065') ,
+('5fc0fd3cd15d4' ,'5fc0fd3cd24fe');
 -- --------------------------------------------------------
 
 -- Table structure for table `history`
@@ -98,75 +98,18 @@ CREATE TABLE `options` (
 --
 
 INSERT INTO `options` (`qid`, `option`, `optionid`) VALUES
-('55892169bf6a7', 'usermod', '55892169d2efc'),
-('55892169bf6a7', 'useradd', '55892169d2f05'),
-('55892169bf6a7', 'useralter', '55892169d2f09'),
-('55892169bf6a7', 'groupmod', '55892169d2f0c'),
-('5589216a3646e', '751', '5589216a48713'),
-('5589216a3646e', '752', '5589216a4871a'),
-('5589216a3646e', '754', '5589216a4871f'),
-('5589216a3646e', '755', '5589216a48722'),
-('558922117fcef', 'echo', '5589221195248'),
-('558922117fcef', 'print', '558922119525a'),
-('558922117fcef', 'printf', '5589221195265'),
-('558922117fcef', 'cout', '5589221195270'),
-('55892211e44d5', 'int a', '55892211f1f97'),
-('55892211e44d5', '$a', '55892211f1fa7'),
-('55892211e44d5', 'long int a', '55892211f1fb4'),
-('55892211e44d5', 'int a$', '55892211f1fbd'),
-('558922894c453', 'cin>>a;', '558922895ea0a'),
-('558922894c453', 'cin<<a;', '558922895ea26'),
-('558922894c453', 'cout>>a;', '558922895ea34'),
-('558922894c453', 'cout<a;', '558922895ea41'),
-('558922899ccaa', 'cout', '55892289aa7cf'),
-('558922899ccaa', 'cin', '55892289aa7df'),
-('558922899ccaa', 'print', '55892289aa7eb'),
-('558922899ccaa', 'printf', '55892289aa7f5'),
-('558923538f48d', '255.0.0.0', '558923539a46c'),
-('558923538f48d', '255.255.255.0', '558923539a480'),
-('558923538f48d', '255.255.0.0', '558923539a48b'),
-('558923538f48d', 'none of these', '558923539a495'),
-('55892353f05c4', '192.168.1.100', '5589235405192'),
-('55892353f05c4', '172.168.16.2', '55892354051a3'),
-('55892353f05c4', '10.0.0.0.1', '55892354051b4'),
-('55892353f05c4', '11.11.11.11', '55892354051be'),
-('558973f4389ac', 'containing root file-system required during bootup', '558973f462e44'),
-('558973f4389ac', ' Contains only scripts to be executed during bootup', '558973f462e56'),
-('558973f4389ac', ' Contains root-file system and drivers required to be preloaded during bootup', '558973f462e61'),
-('558973f4389ac', 'None of the above', '558973f462e6b'),
-('558973f4c46f2', 'Kernel', '558973f4d4abe'),
-('558973f4c46f2', 'Shell', '558973f4d4acf'),
-('558973f4c46f2', 'Commands', '558973f4d4ad9'),
-('558973f4c46f2', 'Script', '558973f4d4ae3'),
-('558973f51600d', 'Boot Loading', '558973f526f9d'),
-('558973f51600d', ' Boot Record', '558973f526fb9'),
-('558973f51600d', ' Boot Strapping', '558973f526fc5'),
-('558973f51600d', ' Booting', '558973f526fce'),
-('558973f55d269', ' Quick boot', '558973f57aef1'),
-('558973f55d269', 'Cold boot', '558973f57af07'),
-('558973f55d269', ' Hot boot', '558973f57af17'),
-('558973f55d269', ' Fast boot', '558973f57af27'),
-('558973f5abb1a', 'bash', '558973f5e7623'),
-('558973f5abb1a', ' Csh', '558973f5e7636'),
-('558973f5abb1a', ' ksh', '558973f5e7640'),
-('558973f5abb1a', ' sh', '558973f5e764a'),
-('5589751a63091', 'q', '5589751a81bd6'),
-('5589751a63091', 'wq', '5589751a81be8'),
-('5589751a63091', ' both (a) and (b)', '5589751a81bf4'),
-('5589751a63091', ' none of the mentioned', '5589751a81bfd'),
-('5589751ad32b8', ' moves screen down one page', '5589751adbdbd'),
-('5589751ad32b8', 'moves screen up one page', '5589751adbdce'),
-('5589751ad32b8', 'moves screen up one line', '5589751adbdd8'),
-('5589751ad32b8', ' moves screen down one line', '5589751adbde2'),
-('5589751b304ef', ' yy', '5589751b3b04d'),
-('5589751b304ef', 'yw', '5589751b3b05e'),
-('5589751b304ef', 'yc', '5589751b3b069'),
-('5589751b304ef', ' none of the mentioned', '5589751b3b073'),
-('5589751b749c9', 'X', '5589751b9a98c'),
-('5589751b749c9', 'x', '5589751b9a9a5'),
-('5589751b749c9', 'D', '5589751b9a9b7'),
-('5589751b749c9', 'd', '5589751b9a9c9'),
-('5589751bd02ec', 'autoindentation is not possible in vi editor', '5589751bdadaa');
+("5fc0fd3cca124" , "DATA BASE MANAGER SYSTEM" , "5fc0fd3ccb1ab"),
+("5fc0fd3cca124" , "DATA BAT MANAGER SYSTEM", "5fc0fd3ccb1af"),
+("5fc0fd3cca124" ,"DATA BASE MANAGEMENT SYSTEM" "5fc0fd3ccb1b0"),
+("5fc0fd3cca124", "DOMAIN BASE MAINTAINANCE SYSTEM" , "5fc0fd3ccb1b1"),
+("5fc0fd3ccd88d" , "Columns", "5fc0fd3cce05e"),
+("5fc0fd3ccd88d","rows","5fc0fd3cce065"),
+("5fc0fd3ccd88d","table","5fc0fd3cce066"),
+("5fc0fd3ccd88d" ,"cell","5fc0fd3cce067"),
+("5fc0fd3cd15d4","table","5fc0fd3cd24fe"),
+("5fc0fd3cd15d4","attribute", "5fc0fd3cd2503"),
+("5fc0fd3cd15d4","value", "5fc0fd3cd2504"),
+("5fc0fd3cd15d4","cell","5fc0fd3cd2505");
 
 -- --------------------------------------------------------
 
@@ -187,9 +130,9 @@ CREATE TABLE `questions` (
 --
 
 INSERT INTO `questions` (`eid`, `qid`, `qns`, `choice`, `sn`) VALUES
-('5fbb8bb661b35' , '5fbb8bf363d4f', 'question 1' , 4 , 1),
-('5fbb8bb661b35' , '5fbb8bf367171' , 'question 2' , 4 , 2),
-('5fbb8bb661b35', '5fbb8bf3695de' , 'question 3' , 4 , 3);
+("5fc0fc967356d","5fc0fd3cca124","FULL FORM OF DBMS", 4 ,1),
+("5fc0fc967356d", "5fc0fd3ccd88d", "WHAT IS AN ATTRIBUTE", 4 , 2),
+("5fc0fc967356d" , "5fc0fd3cd15d4" ,"What is an entity" , 4 ,3);
 -- --------------------------------------------------------
 
 --
