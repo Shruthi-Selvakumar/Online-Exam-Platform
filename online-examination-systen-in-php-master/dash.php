@@ -227,15 +227,6 @@ echo '
   </div>
 </div>
 
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-12 control-label" for="tag"></label>  
-  <div class="col-md-12">
-  <input id="tag" name="tag" placeholder="Enter #tag which is used for searching" class="form-control input-md" type="text">
-    
-  </div>
-</div>
-
 
 <!-- Text input-->
 <div class="form-group">
