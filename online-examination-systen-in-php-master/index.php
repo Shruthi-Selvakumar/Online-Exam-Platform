@@ -168,7 +168,7 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Passwords mus
 
 <div class="row footer">
 <div class="col-md-3">
-<a href="#" class="pull-right btn sub1" data-toggle="modal" data-target="#myModal2"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;<span class="title1"><b>contact</b></span></a></div>
+<a href="#" class="pull-right btn sub1" data-toggle="modal" data-target="#myModal2"><span class="	glyphicon glyphicon-info-sign" aria-hidden="true"></span>&nbsp;<span class="title1"><b>About</b></span></a></div>
 <div class="modal fade" id="myModal2">
   <div class="modal-dialog">
     <div class="modal-content title1">
@@ -182,7 +182,9 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Passwords mus
 
 <div class="form-group">
   <div class="col-md-12">
-    <h2>Online Quiz Portal By - <h2>
+        <h2><p>This is an online test system that allows users to take online tests and automatically generates results based on answers marked by the admin. The system is designed for any number of subjects
+On choosing a subject the test starts and the user may now tick desired answers within the time limit. After the time ends the system goes to the result page and shows the user’s score to them.<p><h2>
+<h5>Online Quiz Portal By - <h5>
         <div class="col-md-12">
         <h6> Meghana Rao - BL.EN.U4CSE18071 <h6>
         <h6>  Navya KNSS - BL.EN.U4CSE18079<h6>
