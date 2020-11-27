@@ -218,23 +218,7 @@ echo '
   </div>
 </div>
 
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-12 control-label" for="time"></label>  
-  <div class="col-md-12">
-  <input id="time" name="time" placeholder="Enter time limit for test in minute" class="form-control input-md" min="1" type="number">
-    
-  </div>
-</div>
 
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-12 control-label" for="tag"></label>  
-  <div class="col-md-12">
-  <input id="tag" name="tag" placeholder="Enter #tag which is used for searching" class="form-control input-md" type="text">
-    
-  </div>
-</div>
 
 
 <!-- Text input-->
