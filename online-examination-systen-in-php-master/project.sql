@@ -142,7 +142,6 @@ CREATE TABLE `quiz` (
   `total` int(11) NOT NULL,
   `time` bigint(20) NOT NULL,
   `intro` text NOT NULL,
-  `tag` varchar(100) NOT NULL,
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -150,8 +149,8 @@ CREATE TABLE `quiz` (
 -- Dumping data for table `quiz`
 --
 
-INSERT INTO `quiz` (`eid`, `title`, `correct`, `wrong`, `total`, `time`, `intro`, `tag`, `date`) VALUES
-('5fc102500489b' , 'Computer Science' ,4 , 1 , 2 , 5 ,'midsem','no tag', '2020-11-27 19:12:40');
+INSERT INTO `quiz` (`eid`, `title`, `correct`, `wrong`, `total`, `time`, `intro`, `date`) VALUES
+('5fc102500489b' , 'Computer Science' ,4 , 1 , 2 , 5 ,'midsem', '2020-11-27 19:12:40');
 
 
 -- --------------------------------------------------------
