@@ -11,29 +11,22 @@ manner to all the users.
 # Student
   1. Login- with authentication
   2. Selecting courses
-  3. Taking quizzes
-  4. Can view a countdown timer for the remaining time of exam/quiz
-  5. Quizzes can be in the form of MCQs, one-word answers, or descriptive answers. Students
-  are required to fill in the text boxes or select correct options.
-  6. View the results after they get published
-  7. Review previous quiz marks and answers
-  8. Logout
+  3. Taking quizzes in form of MCQs
+  4. View the results after they get published
+  5. Review previous quiz marks and answers
+  6. Logout
 # Teaching faculty
   1. Login- with authentication
   2. Creating Online quizzes
-  3. Creating questions in the form of MCQs, one-word answers, or descriptive answers.
-  4. Setting a maximum time limit for each exam
-  5. Publishing results automatically after the quiz deadline
-  6. Editing questions before exam time.
-  7. Viewing the number of students attending the exam, the name of the student, time is
-  taken, and submission time.
+  3. Creating questions in the form of MCQs
+  4. Publishing results automatically after the quiz deadline
+  5. Viewing the number of students attending the exam, the name of the student.
   8. Logout
 # Administrators
   1. Login-with authentication
-  2. Assigning various courses to teaching faculty and students
-  3. The privilege of removing students or faculty from a course
+  2. Creating Quizzes
+  3. The privilege of removing students
   4. Viewing all student marks
-  5. Sending an annual or half annual report to students
-  6. Logout
+  5. Logout
 
 
