@@ -147,6 +147,7 @@ echo '</table></div></div>';}
 ?>
 
 <!--home closed-->
+
 <!--users start-->
 <?php if(@$_GET['q']==1) {
 
@@ -170,6 +171,7 @@ echo '</table></div></div>';
 <!--user end-->
 
 <!--add quiz start-->
+<!--basic quiz info-->
 <?php
 if(@$_GET['q']==4 && !(@$_GET['step']) ) {
 echo ' 
@@ -252,7 +254,7 @@ echo '
 ?>
 <!--add quiz end-->
 
-<!--add quiz step2 start-->
+<!--Add quiz step -2 , inserting questions and corresponding options, as well as correct answer-->
 <?php
 if(@$_GET['q']==4 && (@$_GET['step'])==2 ) {
 echo ' 
@@ -306,11 +308,11 @@ echo '<b>Question number&nbsp;'.$i.'&nbsp;:</><br /><!-- Text input-->
 <br />
 <b>Correct answer</b>:<br />
 <select id="ans'.$i.'" name="ans'.$i.'" placeholder="Choose correct answer " class="form-control input-md" >
-   <option value="a">Select answer for question '.$i.'</option>
-  <option value="a">option a</option>
-  <option value="b">option b</option>
-  <option value="c">option c</option>
-  <option value="d">option d</option> </select><br /><br />'; 
+    <option value="a">Select answer for question '.$i.'</option>
+    <option value="a">option a</option>
+    <option value="b">option b</option>
+    <option value="c">option c</option>
+    <option value="d">option d</option> </select><br /><br />'; 
  }
     
 echo '<div class="form-group">

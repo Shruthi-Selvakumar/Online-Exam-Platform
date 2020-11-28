@@ -33,6 +33,7 @@ CREATE TABLE `history` (
   `email` varchar(50) NOT NULL,
   `eid` text NOT NULL,
   `score` int(11) NOT NULL,
+  --level = number of questions
   `level` int(11) NOT NULL,
   `correct` int(11) NOT NULL,
   `wrong` int(11) NOT NULL,
@@ -47,10 +48,6 @@ CREATE TABLE `options` (
   `option` varchar(5000) NOT NULL,
   `optionid` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `options`
---
 
 INSERT INTO `options` (`qid`, `option`, `optionid`) VALUES
 ('5fc102e61d304' ,'#' ,'5fc102e61e273'),

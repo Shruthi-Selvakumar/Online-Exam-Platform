@@ -111,6 +111,8 @@ while($row=mysqli_fetch_array($q) )
 {
 $ansid=$row['ansid'];
 }
+
+//correct answer
 if($ans == $ansid)
 {
 $q=mysqli_query($con,"SELECT * FROM quiz WHERE eid='$eid' " );
@@ -133,7 +135,8 @@ $r++;
 $s=$s+$correct;
 $q=mysqli_query($con,"UPDATE `history` SET `score`=$s,`level`=$sn,`correct`=$r, date= NOW()  WHERE  email = '$email' AND eid = '$eid'")or die('Error124');
 
-} 
+}
+//wrong answer 
 else
 {
 $q=mysqli_query($con,"SELECT * FROM quiz WHERE eid='$eid' " )or die('Error129');
@@ -191,7 +194,7 @@ header("location:account.php?q=result&eid=$eid");
 }
 }
 
-//restart quiz
+//restart quiz (only for admin)
 if(@$_GET['q']== 'quizre' && @$_GET['step']== 25 ) {
 $eid=@$_GET['eid'];
 $n=@$_GET['n'];

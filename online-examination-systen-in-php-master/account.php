@@ -105,6 +105,7 @@ echo '</table></div></div>';
 
 }?>
 
+<!--Retrieving options and questions for each quiz-->
 <?php
 if(@$_GET['q']== 'quiz' && @$_GET['step']== 2) {
 $eid=@$_GET['eid'];
@@ -131,6 +132,7 @@ echo'<input type="radio" name="ans" value="'.$optionid.'">'.$option.'<br /><br /
 echo'<br /><button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span>&nbsp;Submit</button></form></div>';
 //header("location:dash.php?q=4&step=2&eid=$id&n=$total");
 }
+
 //result display
 if(@$_GET['q']== 'result' && @$_GET['eid']) 
 {

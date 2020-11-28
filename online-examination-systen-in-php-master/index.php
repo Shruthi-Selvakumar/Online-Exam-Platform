@@ -32,7 +32,7 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Passwords mus
 <span class="logo">Online Quiz Application</span></div>
 <div class="col-md-2 col-md-offset-4">
 <a href="#" class="pull-right btn sub1" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;<span class="title1"><b>Log In</b></span></a></div>
-<!--sign in modal  -->
+<!--log in modal  -->
 <div class="modal fade" id="myModal">
   <div class="modal-dialog">
     <div class="modal-content title1">
