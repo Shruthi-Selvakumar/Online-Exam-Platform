@@ -7,8 +7,8 @@ corresponding faculty have to log in to the system with proper authentication fr
 administrator. The administrator has the privilege to create accounts for the users and can
 configure the subject. Various reports can be generated to view the results in a well-organized
 manner to all the users.
-# Users:
-# Student
+## Users:
+## Student
   1. Login- with authentication
   2. Selecting courses
   3. Taking quizzes
@@ -18,7 +18,7 @@ manner to all the users.
   6. View the results after they get published
   7. Review previous quiz marks and answers
   8. Logout
-# Teaching faculty
+## Teaching faculty
   1. Login- with authentication
   2. Creating Online quizzes
   3. Creating questions in the form of MCQs, one-word answers, or descriptive answers.
@@ -28,7 +28,7 @@ manner to all the users.
   7. Viewing the number of students attending the exam, the name of the student, time is
   taken, and submission time.
   8. Logout
-# Administrators
+## Administrators
   1. Login-with authentication
   2. Assigning various courses to teaching faculty and students
   3. The privilege of removing students or faculty from a course
@@ -37,18 +37,18 @@ manner to all the users.
   6. Logout
 
         
-# Front end: 
-   HTML: HTML is used to create and save web document. E.g. Notepad/Notepad++ 
-   CSS : (Cascading Style Sheets) Create attractive Layout 
-   JavaScript: it is a programming language, commonly use with web browsers. 
-# Back end: 
-   PHP: Hypertext Preprocessor (PHP) is a technology that allows software developers to create dynamically generated web pages, in HTML, XML, or other document types, as per client request. PHP is open source software. 
-   MySQL: MySql is a database, widely used for accessing querying, updating, and managing data in databases. 
+## Front end: 
+   *HTML: HTML is used to create and save web document. E.g. Notepad/Notepad++
+    CSS : (Cascading Style Sheets) Create attractive Layout 
+    JavaScript: it is a programming language, commonly use with web browsers.* 
+## Back end: 
+   *PHP: Hypertext Preprocessor (PHP) is a technology that allows software developers to create dynamically generated web pages, in HTML, XML, or other document types, as per client request. PHP is open source software. 
+   MySQL: MySql is a database, widely used for accessing querying, updating, and managing data in databases.* 
    
-  # Web Server 
-  XAMPP Server - XAMPP is a free and open-source cross-platform web server solution stack package developed by Apache Friends, consisting mainly of the Apache HTTP Server, MariaDB database, and interpreters for scripts written in the PHP and Perl programming languages.
+## Web Server 
+  *XAMPP Server - XAMPP is a free and open-source cross-platform web server solution stack package developed by Apache Friends, consisting mainly of the Apache HTTP Server, MariaDB database, and interpreters for scripts written in the PHP and Perl programming languages.*
 
-  # Deployment Details
-  htdocs in xampp - This directory will store file data collected for web pages that we tested on our XAMPP server.
+## Deployment Details
+  *htdocs in xampp - This directory will store file data collected for web pages that we tested on our XAMPP server.*
 
 
